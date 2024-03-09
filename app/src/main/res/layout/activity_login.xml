@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Register"
+    android:background="@color/dwhite"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="50dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/Dorminant_1"
+            android:gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="50dp"
+            android:text="dairy cattle manager"
+            android:textAllCaps="true"
+            android:textColor="@color/dwhite"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!--Username-->
+        <ImageView
+            android:layout_width="800dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/Dorminant_1"
+            android:src="@drawable/login1"
+            />
+
+        <!--Email-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            android:layout_marginTop="10dp"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawableStart="@drawable/round_person_24"
+                android:drawablePadding="5dp"
+                android:hint="Email"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/Dorminant_1"
+                android:textColorHint="@color/Dorminant_1" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    password-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            android:layout_marginTop="10dp"
+            app:helperTextTextColor="@color/dred"
+            app:passwordToggleEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawableStart="@drawable/round_person_24"
+                android:drawablePadding="5dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/Dorminant_1"
+                android:textColorHint="@color/Dorminant_1" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    confirm password-->
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Login"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Login"
+            android:textColor="@color/dwhite"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/style_custombtn1"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Welcome to your herd management hub!"
+                android:textSize="14sp"
+                android:textColor="@color/Dorminant_1"
+                android:textStyle="normal"
+                android:paddingTop="10dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

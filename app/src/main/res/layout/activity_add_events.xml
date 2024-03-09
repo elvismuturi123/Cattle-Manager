@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Dorminant_1"
+    android:padding="20dp"
+    android:layout_marginBottom="10dp"
+    tools:context=".Register"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        >
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="DAIRY CATTLE MANAGER"
+            android:textStyle="bold"
+            android:textColor="@color/dwhite"
+            android:textSize="22sp"
+            android:layout_marginBottom="10dp"
+            />
+        <!--Date picker-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_textview"
+            android:text="Select Event Date"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:textColor="@color/dwhite"
+            android:layout_marginTop="15sp"
+            />
+
+        <EditText
+            android:id="@+id/event_dateid"
+            android:layout_marginTop="2sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dwhite"
+            android:hint="Event Date"
+            android:inputType="date"
+            android:layout_marginBottom="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/event_typeid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawablePadding="5dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Event Type"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/dblue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/dblue"
+            android:textColor="@color/dwhite"
+            android:layout_marginTop="10dp"
+            android:text="Symptoms"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/symptoms_id"
+            android:hint="Symptoms of the Sickness"
+            android:minLines="10"
+            android:backgroundTint="@color/dwhite"
+            android:background="@color/dred"
+            android:gravity="top"
+            android:textSize="20sp"
+            android:layout_marginVertical="8dp"
+            android:padding="12dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/dblue"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/diagnosis_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawablePadding="5dp"
+                android:layout_marginBottom="10dp"
+                android:hint="Diagnosis"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/Dorminant_2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/technician_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawablePadding="5dp"
+                android:hint="Name of Technician"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/dblue" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp"
+            android:layout_marginVertical="26dp"
+            android:backgroundTint="@color/dwhite"
+            android:background="@color/dwhite"
+            >
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dblue"
+                android:textColor="@color/dwhite"
+                android:text="Description"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/events_notes_id"
+                android:hint="Write Short Notes on the Event"
+                android:minLines="10"
+                android:gravity="top"
+                android:textSize="20sp"
+                android:maxLines="50"
+                android:layout_marginVertical="8dp"
+                android:padding="12dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/dblue"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save_eventButton"
+            android:layout_marginTop="0dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/dblue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/style_custombtn1"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

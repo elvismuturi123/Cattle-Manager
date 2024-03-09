@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "575217224108",
+    "project_id": "cattle-manager-f3d22",
+    "storage_bucket": "cattle-manager-f3d22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575217224108:android:8f391a34180f6490b45209",
+        "android_client_info": {
+          "package_name": "com.example.cattlemanager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDny4IE1yvSV2zEIvQ-JlTfv0PJYtG0tFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

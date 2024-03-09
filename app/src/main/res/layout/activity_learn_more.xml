@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Dorminant_1"
+    tools:context=".LearnMore"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dwhite"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="learn more about care"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+        android:textSize="22dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/dwhite"
+        android:text="Vaccinations:
+One of the most effective ways to safeguard your cattle is through vaccinations. Consult with your veterinarian to develop a vaccination schedule tailored to your specific region and the types of diseases prevalent in your area. Common vaccinations include those for diseases like blackleg, respiratory infections, and brucellosis.
+
+Quarantine and Biosecurity:
+Implement a strict quarantine protocol for introducing new cattle to your farm. Isolate new arrivals for a set period to monitor their health before integrating them with the existing herd. Additionally, establish biosecurity measures, such as limiting visitors to essential personnel, to reduce the risk of introducing diseases onto your farm.
+
+Nutritional Management:
+Ensure your cattle receive a well-balanced and nutritionally adequate diet. Proper nutrition strengthens their immune system, making them more resilient to diseases. Regularly assess and adjust feed quality, quantity, and composition based on the specific needs of different age groups and seasons.
+
+Clean Water Supply:
+Provide access to clean and uncontaminated water sources. Clean water is crucial for maintaining overall health and preventing waterborne diseases. Regularly clean and disinfect water troughs to prevent the growth of harmful bacteria.
+
+"
+        />
+
+
+
+</LinearLayout>

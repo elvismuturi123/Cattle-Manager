@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/Dorminant_1"
+    tools:context=".Register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="DAIRY CATTLE MANAGER"
+            android:textStyle="bold"
+            android:textColor="@color/dwhite"
+            android:textSize="26sp"
+            />
+
+
+
+        <!--Username-->
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/dwhite"
+            android:src="@drawable/register1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nameRR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawableStart="@drawable/round_person_24"
+                android:drawablePadding="5dp"
+                android:hint="User Name"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/dblue" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Email-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailRR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawableStart="@drawable/round_person_24"
+                android:drawablePadding="5dp"
+                android:hint="Email"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/dblue" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    password-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+
+            app:helperTextTextColor="@color/dred"
+            app:passwordToggleEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordRR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawableStart="@drawable/round_person_24"
+                android:drawablePadding="5dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/dblue" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--    confirm password-->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+
+            app:helperTextTextColor="@color/dred"
+            app:passwordToggleEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cpasswordRR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawableStart="@drawable/round_person_24"
+                android:drawablePadding="5dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/dblue" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_Register"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:background="@drawable/style_custombtn1"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Already have an account?"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/login_here"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:text="Login"
+                android:textColor="@color/dblue"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

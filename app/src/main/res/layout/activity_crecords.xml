@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Dorminant_1"
+    android:padding="15dp"
+    android:layout_marginBottom="10dp"
+    tools:context=".Register"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        >
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="DAIRY CATTLE MANAGER"
+            android:textStyle="bold"
+            android:textColor="@color/dwhite"
+            android:textSize="30sp"
+            android:layout_marginBottom="28dp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawablePadding="5dp"
+                android:hint="Cow Name"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/dblue" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textAlignment="center"
+            android:textColor="@color/dwhite"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAllCaps="true"
+            />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/cowCategorySpinner"
+            android:padding="14dp"
+            android:background="@color/dblue"
+            android:backgroundTint="@color/dblue"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ctagnumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:backgroundTint="@color/dblue"
+                android:drawablePadding="5dp"
+                android:hint="Tag Number"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/dblue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cowBreedSpinner"
+            android:layout_marginBottom="5dp"
+            android:padding="14dp"
+            android:background="@color/dblue"
+            android:backgroundTint="@color/dblue"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dblue"
+            app:boxStrokeColor="@color/dblue"
+            app:boxStrokeWidth="1dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/dred"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dblue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                android:drawablePadding="5dp"
+                android:hint="Weight in Kg"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:textColor="@color/dblue"
+                android:textColorHint="@color/Dorminant_2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+         <!--Date picker-->
+       <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date_textview"
+            android:text="Select Birth Date"
+            android:textSize="18sp"
+            android:layout_marginTop="15sp"
+            />
+
+        <EditText
+            android:id="@+id/birth_date"
+            android:layout_marginTop="0sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date of Birth"
+            android:inputType="date" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginVertical="26dp"
+    android:backgroundTint="@color/dwhite"
+    android:background="@color/dwhite"  >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/dwhite"
+        android:text="Additional Information"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:background="@color/dblue"
+
+        />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/notes_id"
+            android:hint="Write Short Notes"
+            android:minLines="8"
+            android:gravity="top"
+            android:textSize="20sp"
+            android:layout_marginVertical="8dp"
+            android:padding="12dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/dblue"/>
+    </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:text="Choose Image"
+                android:id="@+id/button_uploadImage"
+                android:layout_marginTop="80dp"
+                />
+
+            <ImageView
+                android:id="@+id/Image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/default_image"
+                android:layout_marginBottom="10dp"
+                android:background="@color/dwhite" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginBottom="60sp"
+            android:id="@+id/save_button"
+            android:textAllCaps="true"
+            android:shadowColor="@color/dred"
+            android:backgroundTint="@color/dblue"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

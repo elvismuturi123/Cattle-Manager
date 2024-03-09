@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.JerseyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/dwhite"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/titleLayout"
+            android:orientation="vertical"
+            android:padding="2dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/Dorminant_1"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/dblue"
+                android:gravity="center"
+                android:text="Guernsey milk"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageLayout"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/dwhite"
+            android:gravity="center"
+            android:layout_below="@+id/titleLayout"
+            >
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:src="@drawable/milk"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/Dorminant_1"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_below="@+id/imageLayout"
+                android:text="Description"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:background="@color/dblue"
+                android:textColor="@color/dwhite"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:background="@color/dblue"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@color/dblue"
+                    android:text="Breed Category"
+                    android:textColor="@color/dwhite"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dispBreedSales"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/dblue"
+                    android:text="  "
+                    android:textColor="@color/dwhite"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:background="@color/dblue"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@color/dblue"
+                    android:text="Available Milk"
+                    android:textColor="@color/dwhite"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dispAvailableQuantity"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/dblue"
+                    android:text="  "
+                    android:textColor="@color/dwhite"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/dblue"
+                    android:text="Liters"
+                    android:textColor="@color/dwhite"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:background="@color/dblue"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:background="@color/dblue"
+                    android:text="Price Per Liter"
+                    android:textColor="@color/dwhite"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/disp_pricePerLitre"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/dblue"
+                    android:text="  "
+                    android:textColor="@color/dwhite"
+                    />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buyButton"
+                android:background="@color/dblue"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Buy milk"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
