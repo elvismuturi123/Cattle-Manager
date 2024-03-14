@@ -26,7 +26,7 @@ public class Welcome extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toolbox.navigateTo(Welcome.this, Register.class);
+                Toolbox.navigateTo(Welcome.this, Home.class);
             }
         });
     }

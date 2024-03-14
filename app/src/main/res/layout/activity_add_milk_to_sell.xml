@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Dorminant_1"
+    android:padding="20dp"
+    android:layout_marginBottom="10dp"
+    tools:context=".Register"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        >
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="DAIRY CATTLE MANAGER"
+            android:textStyle="bold"
+            android:textColor="@color/dwhite"
+            android:textSize="22sp"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Cow breed"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp"
+            android:textAllCaps="true"
+            android:textColor="@color/dwhite"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/cattleBreedSelectSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/dblue"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            >
+
+            <!--Date picker-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/date_textview"
+                android:text="Select Date"
+                android:textSize="18sp"
+                android:textColor="@color/dwhite"
+                android:layout_marginTop="15sp"
+                />
+
+            <EditText
+                android:id="@+id/sale_date"
+                android:layout_marginTop="0sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dblue"
+                android:hint="Milking Date"
+                android:inputType="date" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                app:boxStrokeColor="@color/dblue"
+                app:boxStrokeWidth="1dp"
+                app:endIconMode="clear_text"
+                app:helperTextTextColor="@color/dred"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/dblue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/available_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/dblue"
+                    android:drawablePadding="5dp"
+                    android:text="0"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Available Milk in Litres"
+                    android:inputType="text"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/dblue"
+                    android:textColorHint="@color/dblue" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dblue"
+                app:boxStrokeColor="@color/dblue"
+                app:boxStrokeWidth="1dp"
+                app:endIconMode="clear_text"
+                app:helperTextTextColor="@color/dred"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/dblue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pricePerLitre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/dblue"
+                    android:drawablePadding="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:hint="Price per Liter in KES"
+                    android:inputType="text"
+                    android:text="0"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/dblue"
+                    android:textColorHint="@color/dblue" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:layout_marginVertical="26dp"
+                android:backgroundTint="@color/dwhite"
+                android:background="@color/dwhite"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtShortNotesHeading"
+                    android:background="@color/dblue"
+                    android:textColor="@color/dwhite"
+                    android:text="Description"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Sale_notes_id"
+                    android:hint="Write Short Notes"
+                    android:minLines="6"
+                    android:gravity="top"
+                    android:textSize="20sp"
+                    android:layout_marginVertical="8dp"
+                    android:padding="12dp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/dblue"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/save_mButton"
+                    android:layout_gravity="end"
+                    android:background="@drawable/style_custombtn1"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

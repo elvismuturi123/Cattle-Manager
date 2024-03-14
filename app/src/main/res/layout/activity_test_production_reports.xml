@@ -98,6 +98,7 @@
                     android:textStyle="bold"
                     android:textFontWeight="700"
                     android:textColor="@color/dwhite"/>
+
                 <com.github.mikephil.charting.charts.BarChart
                     android:layout_width="match_parent"
                     android:layout_height="500dp"
@@ -105,6 +106,7 @@
                     android:id="@+id/cattleBarChart"
                     android:layout_margin="20dp"
                     />
+
             </LinearLayout>
         </LinearLayout>
 

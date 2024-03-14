@@ -108,7 +108,10 @@
                     android:id="@+id/cattleBarChart"
                     android:layout_marginTop="20dp"
                     />
+
+
             </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

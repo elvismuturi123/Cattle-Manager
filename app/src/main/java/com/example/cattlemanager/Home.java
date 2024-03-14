@@ -22,6 +22,6 @@ CardView myTestCardview = findViewById(R.id.test_page);
         myControlCardview.setOnClickListener(v -> Toolbox.navigateTo(Home.this, ControlActivity.class));
         myfProgramCardview.setOnClickListener(v -> Toolbox.navigateTo(Home.this, WelcomeFprogram.class));
         myReportsCardviiew.setOnClickListener(v -> Toolbox.navigateTo(Home.this, Home_Reports.class));
-        myTestCardview.setOnClickListener(v -> Toolbox.navigateTo(Home.this, SalesPageActivity.class));
+        myTestCardview.setOnClickListener(v -> Toolbox.navigateTo(Home.this, AddMilkToSell.class));
     }
 }

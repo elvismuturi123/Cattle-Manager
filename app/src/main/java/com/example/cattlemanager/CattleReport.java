@@ -10,14 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-//import com.github.mikephil.charting.charts.BarChart;
-//import com.github.mikephil.charting.components.Legend;
-//import com.github.mikephil.charting.components.XAxis;
-//import com.github.mikephil.charting.data.BarData;
-//import com.github.mikephil.charting.data.BarDataSet;
-//import com.github.mikephil.charting.data.BarEntry;
-//import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,10 +31,10 @@ import java.util.Map;
 public class CattleReport extends AppCompatActivity {
     MaterialToolbar materialToolbar;
 
-//    BarChart cattleBarChart;
-//    BarData barData;
-//    BarDataSet barDataSet;
-//    ArrayList<BarEntry> cattleBarEntry;
+    BarChart cattleBarChart;
+    BarData barData;
+    BarDataSet barDataSet;
+    ArrayList<BarEntry> cattleBarEntry;
     String[] cattleCategories;
     int bullCount,cowsCount,heiferCount,weanersCount,calvesCount,steersCount;
     private TableLayout tableLayout;
@@ -47,13 +46,20 @@ public class CattleReport extends AppCompatActivity {
         materialToolbar=findViewById(R.id.toolBar);
         tableLayout=findViewById(R.id.cattleTable);
 
-//        cattleChart=findViewById(R.id.analysisContainer);
-//        cattleReport=findViewById(R.id.cattleCategory);
 
-//        cattleBarChart=findViewById(R.id.cattleBarChart);
-//        cattleBarEntry=new ArrayList<>();
-//        cattleCategories=getApplicationContext().getResources().getStringArray(R.array.cattleCategories);
-//        fetchData();
+
+        cattleBarChart = findViewById(R.id.cattleBarChart);
+
+
+
+
+        // cattleChart=findViewById(R.id.analysisContainer);
+       // cattleReport=findViewById(R.id.cattleCategory);
+
+        cattleBarChart=findViewById(R.id.cattleBarChart);
+        cattleBarEntry=new ArrayList<>();
+       // cattleCategories=getApplicationContext().getResources().getStringArray(R.array.cattleCategories);
+        fetchData();
 
         materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,14 +119,14 @@ public class CattleReport extends AppCompatActivity {
                 map.put("Steers",steersCount);
                 map.put("Weaners",weanersCount);
 
-//                addTableRow(map);
-//                cattleBarEntry.add(new BarEntry(1,bullCount));
-//                cattleBarEntry.add(new BarEntry(2,calvesCount));
-//                cattleBarEntry.add(new BarEntry(3,heiferCount));
-//                cattleBarEntry.add(new BarEntry(4,cowsCount));
-//                cattleBarEntry.add(new BarEntry(5,steersCount));
-//                cattleBarEntry.add(new BarEntry(6,weanersCount));
-//                drawChart(cattleBarEntry);
+                addTableRow(map);
+                cattleBarEntry.add(new BarEntry(1,bullCount));
+                cattleBarEntry.add(new BarEntry(2,calvesCount));
+                cattleBarEntry.add(new BarEntry(3,heiferCount));
+                cattleBarEntry.add(new BarEntry(4,cowsCount));
+                cattleBarEntry.add(new BarEntry(5,steersCount));
+                cattleBarEntry.add(new BarEntry(6,weanersCount));
+                drawChart(cattleBarEntry);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -129,52 +135,52 @@ public class CattleReport extends AppCompatActivity {
         });
     }
 
-//    private void drawChart(ArrayList<BarEntry> cattleBarEntry) {
-//
-//        barDataSet=new BarDataSet(cattleBarEntry,"Cattle Category");
-//        barData=new BarData(barDataSet);
-//        cattleBarChart.setData(barData);
-//
-//        barDataSet.setColor(Color.parseColor("#3E64ED"));
-//        barDataSet.setValueTextSize(16f);
-//        barDataSet.setValueTextColor(Color.WHITE);
-//        cattleBarChart.getDescription().setEnabled(false);
-//        XAxis xAxis=cattleBarChart.getXAxis();
-//        xAxis.setValueFormatter(new IndexAxisValueFormatter(cattleCategories));
-//        xAxis.setCenterAxisLabels(true);
-//        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-//        xAxis.setGranularity(1);
-//        xAxis.setDrawAxisLine(true);
-//        xAxis.setGranularityEnabled(true);
-//
-//
-//        cattleBarChart.setDragEnabled(true);
-//        cattleBarChart.setVisibleXRangeMaximum(3);
-//
-//        Legend legend = cattleBarChart.getLegend();
-//        //setting the shape of the legend form to line, default square shape
-//        legend.setForm(Legend.LegendForm.LINE);
-//        //setting the text size of the legend
-//        legend.setTextSize(11f);
-//        //setting the alignment of legend toward the chart
-//        legend.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
-//        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
-//        //setting the stacking direction of legend
-//        legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-//        //setting the location of legend outside the chart, default false if not set
-//        legend.setDrawInside(false);
-//
-//        float barSpace=0.05f;
-//        float groupSpace =0.75f;
-//
-//        barData.setBarWidth(0.5f);
-//        cattleBarChart.getXAxis().setAxisMinimum(0);
-//        cattleBarChart.getXAxis().setAxisMaximum(0+cattleBarChart.getBarData().getGroupWidth(groupSpace,barSpace)*6);
-//        cattleBarChart.getAxisLeft().setAxisMinimum(0);
-//        cattleBarChart.setDrawGridBackground(false);
-////                    educationBarChart.groupBars(0,groupSpace,barSpace);
-//        cattleBarChart.invalidate();
-//    }
+    private void drawChart(ArrayList<BarEntry> cattleBarEntry) {
+
+        barDataSet=new BarDataSet(cattleBarEntry,"Cattle Category");
+        barData=new BarData(barDataSet);
+        cattleBarChart.setData(barData);
+
+        barDataSet.setColor(Color.parseColor("#3E64ED"));
+        barDataSet.setValueTextSize(16f);
+        barDataSet.setValueTextColor(Color.WHITE);
+        cattleBarChart.getDescription().setEnabled(false);
+        XAxis xAxis=cattleBarChart.getXAxis();
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(cattleCategories));
+        xAxis.setCenterAxisLabels(true);
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setGranularity(1);
+        xAxis.setDrawAxisLine(true);
+        xAxis.setGranularityEnabled(true);
+
+
+        cattleBarChart.setDragEnabled(true);
+        cattleBarChart.setVisibleXRangeMaximum(3);
+
+        Legend legend = cattleBarChart.getLegend();
+        //setting the shape of the legend form to line, default square shape
+        legend.setForm(Legend.LegendForm.LINE);
+        //setting the text size of the legend
+        legend.setTextSize(11f);
+        //setting the alignment of legend toward the chart
+        legend.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
+        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
+        //setting the stacking direction of legend
+        legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+        //setting the location of legend outside the chart, default false if not set
+        legend.setDrawInside(false);
+
+        float barSpace=0.05f;
+        float groupSpace =0.75f;
+
+        barData.setBarWidth(0.5f);
+        cattleBarChart.getXAxis().setAxisMinimum(0);
+        cattleBarChart.getXAxis().setAxisMaximum(0+cattleBarChart.getBarData().getGroupWidth(groupSpace,barSpace)*6);
+        cattleBarChart.getAxisLeft().setAxisMinimum(0);
+        cattleBarChart.setDrawGridBackground(false);
+        //educationBarChart.groupBars(0,groupSpace,barSpace);
+        cattleBarChart.invalidate();
+    }
 
     public static class Cattle {
 

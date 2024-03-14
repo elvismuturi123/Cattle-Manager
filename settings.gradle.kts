@@ -1,7 +1,9 @@
 pluginManagement {
     repositories {
         google()
+        jcenter()
         mavenCentral()
+        maven(url = "https://jitpack.io")
         gradlePluginPortal()
     }
 }
@@ -10,8 +12,16 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        maven(url = "https://jitpack.io")
     }
 }
+// settings.gradle.kts
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+}
+
+
 
 rootProject.name = "Cattle Manager"
 include(":app")
