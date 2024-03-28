@@ -1,4 +1,4 @@
-package com.example.cattlemanager;
+package com.example.cattlemanager.Classses;
 
 public class Cows {
     String cow_id;

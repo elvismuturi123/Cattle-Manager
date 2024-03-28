@@ -6,6 +6,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cattlemanager.Classses.Toolbox;
+
 public class Welcome extends AppCompatActivity {
 
     @Override
@@ -19,14 +21,13 @@ public class Welcome extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toolbox.navigateTo(Welcome.this, SalesPageActivity.class);
+                Toolbox.navigateTo(Welcome.this, Login.class);
             }
         });
-
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toolbox.navigateTo(Welcome.this, Home.class);
+                Toolbox.navigateTo(Welcome.this, Register.class);
             }
         });
     }

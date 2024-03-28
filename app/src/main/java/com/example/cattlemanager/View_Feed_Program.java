@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.cattlemanager.Adapters.FeedAdapter;
+import com.example.cattlemanager.Classses.Feed;
+import com.example.cattlemanager.Classses.Toolbox;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

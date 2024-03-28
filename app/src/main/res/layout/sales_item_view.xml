@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:layout_margin="10dp"
-    android:background="@color/dwhite"
+    android:background="@color/Dorminant_1"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
@@ -20,20 +20,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id="@+id/testLayout"
             android:padding="10dp"
             >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/milk"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="center"
                 android:orientation="horizontal"
-                android:gravity="center_horizontal"
                 android:background="@color/Dorminant_1"
                 >
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/dwhite"
-                    android:text="Breed:  "
+                    android:text="Breed    :  "
                     />
                 <TextView
                     android:layout_width="wrap_content"
@@ -83,7 +92,43 @@
                     android:layout_marginStart="10dp"
                     android:text="  "
                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Litres"/>
+
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price Per Litre  :"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/disp_pricePerLter"
+                    android:layout_marginStart="10dp"
+                    android:text="  "
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shillings  :"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -95,25 +140,22 @@
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/updateSaleBtn"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerInParent="true"
-                        android:layout_marginStart="20dp"
-                        android:background="@color/Dorminant_1"
+                        android:background="@color/dblue"
                         android:elevation="5dp"
                         android:paddingHorizontal="10dp"
-                        android:text="Update"
+                        android:text="buy milk"
                         android:textColor="@color/dwhite" />
-
 
                 </RelativeLayout>
 
             </LinearLayout>
 
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

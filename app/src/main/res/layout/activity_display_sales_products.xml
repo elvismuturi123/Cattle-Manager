@@ -1,9 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Display_SalesProducts">
+    android:background="@color/Dorminant_1"
+    tools:context=".MainActivity">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoutFromDispProducts"
+        android:text="Logout"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logoutFromDispProducts"
+        android:layout_below="@+id/navTocAddSalesButton"
+        android:padding="10dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/recyclerViewProducts"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/page_title"
+        android:textSize="32sp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Display Products"
+        android:textAllCaps="true"
+        android:textColor="@color/dwhite"
+        android:textStyle="bold"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/navTocAddSalesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page_title"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="@color/dblue"
+        app:borderWidth="0dp"
+        app:cornerRadius="28dp"
+        app:elevation="600dp"
+        app:pressedTranslationZ="12dp"
+        app:srcCompat="@drawable/add" />
+
+</RelativeLayout>

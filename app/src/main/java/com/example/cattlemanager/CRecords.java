@@ -1,9 +1,5 @@
 package com.example.cattlemanager;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -21,17 +17,21 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.cattlemanager.Classses.Cows;
+import com.example.cattlemanager.Classses.Toolbox;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
-
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
@@ -90,7 +90,7 @@ public class CRecords extends AppCompatActivity {
         mImageView = findViewById(R.id.Image);
 
         cowCategorySpinner = findViewById(R.id.cowCategorySpinner);
-        cowBreedCategorySpinner = findViewById(R.id.cowBreedSpinner);
+        cowBreedCategorySpinner = findViewById(R.id.cattleBreedSelectSpinner);
 
 
         mStorageRef = FirebaseStorage.getInstance().getReference().child("Cattle_Images");
@@ -183,7 +183,7 @@ public class CRecords extends AppCompatActivity {
         cow_BreedCategories_array[4] = Breed5;
 
         // Initialize cowBreedCategorySpinner by finding it using findViewById
-        Spinner cowBreedCategorySpinner = findViewById(R.id.cowBreedSpinner); // Replace 'your_spinner_id' with the actual ID of your spinner
+        Spinner cowBreedCategorySpinner = findViewById(R.id.cattleBreedSelectSpinner); // Replace 'your_spinner_id' with the actual ID of your spinner
 
         // Check if cowBreedCategorySpinner is not null before setting its adapter
         if (cowBreedCategorySpinner != null) {

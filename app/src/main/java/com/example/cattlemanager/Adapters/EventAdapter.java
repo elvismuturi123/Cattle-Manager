@@ -1,4 +1,4 @@
-package com.example.cattlemanager;
+package com.example.cattlemanager.Adapters;
 
 
 
@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.cattlemanager.Classses.Events;
+import com.example.cattlemanager.R;
+import com.example.cattlemanager.ViewAllTheEventsActivity;
 
 import java.util.ArrayList;
 

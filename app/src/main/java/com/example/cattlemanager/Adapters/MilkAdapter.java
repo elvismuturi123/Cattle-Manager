@@ -1,4 +1,4 @@
-package com.example.cattlemanager;
+package com.example.cattlemanager.Adapters;
 
 
 
@@ -12,6 +12,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.cattlemanager.EditMilkDetails;
+import com.example.cattlemanager.Classses.Milk;
+import com.example.cattlemanager.R;
+import com.example.cattlemanager.View_all_milk_details;
 
 import java.util.ArrayList;
 

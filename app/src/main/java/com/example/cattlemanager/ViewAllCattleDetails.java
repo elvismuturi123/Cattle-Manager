@@ -1,17 +1,17 @@
 package com.example.cattlemanager;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.cattlemanager.Adapters.CattleAdapter;
+import com.example.cattlemanager.Classses.Cows;
+import com.example.cattlemanager.Classses.Toolbox;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -37,9 +37,7 @@ public class ViewAllCattleDetails extends AppCompatActivity {
     TextView cowCategory;
 
 //    AppCompatButton updateCattleRecords;
-
     String retrieved_url;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -89,8 +87,6 @@ public class ViewAllCattleDetails extends AppCompatActivity {
                             // load the retrieved url
                             loadImage(retrieved_url);
                         }
-
-
 
                         Toolbox.showToast(ViewAllCattleDetails.this, "  Image load Successful!!");
                     } else {

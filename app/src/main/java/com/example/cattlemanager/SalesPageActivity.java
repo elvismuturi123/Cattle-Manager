@@ -6,16 +6,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SalesPageActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
 
+
+
+    DatabaseReference salesRef = FirebaseDatabase.getInstance().getReference("Sales");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_page);
+//
+//        // Get class data
+//         MilkProduct milkProduct = new MilkProduct(productID, cBreed, cDate, cTotal, cPrice, cNotes);
+//        salesRef.child(breed).push().setValue(milkProduct);
+
 
         tabLayout = findViewById(R.id.salesMilkTabLayout);
         viewPager2 = findViewById(R.id.viewPagerSales);
@@ -43,10 +54,5 @@ public class SalesPageActivity extends AppCompatActivity {
                tabLayout.getTabAt(position).select();
            }
        });
-
-
-
-
-
     }
 }

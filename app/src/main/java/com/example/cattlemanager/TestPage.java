@@ -9,8 +9,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import com.example.cattlemanager.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.example.cattlemanager.Classses.Milk;
+import com.example.cattlemanager.Classses.Toolbox;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

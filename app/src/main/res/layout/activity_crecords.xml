@@ -107,7 +107,7 @@
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/cowBreedSpinner"
+            android:id="@+id/cattleBreedSelectSpinner"
             android:layout_marginBottom="5dp"
             android:padding="14dp"
             android:background="@color/dblue"

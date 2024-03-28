@@ -1,28 +1,21 @@
 package com.example.cattlemanager;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.cattlemanager.Classses.Events;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.ArrayList;
-
 public class ViewAllTheEventsActivity extends AppCompatActivity {
 
-    ArrayList<Events> eventsArrayList;
-    RecyclerView recyclerViewAllEventsDetails;
-    FirebaseDatabase db_events = FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference;
-    EventAdapter eventAdapter;
     TextView event_date;
     TextView event_type;
     TextView cSymptoms;

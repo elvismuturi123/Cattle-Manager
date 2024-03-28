@@ -4,6 +4,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.example.cattlemanager.Classses.Toolbox;
+
 public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,6 @@ CardView myTestCardview = findViewById(R.id.test_page);
         myControlCardview.setOnClickListener(v -> Toolbox.navigateTo(Home.this, ControlActivity.class));
         myfProgramCardview.setOnClickListener(v -> Toolbox.navigateTo(Home.this, WelcomeFprogram.class));
         myReportsCardviiew.setOnClickListener(v -> Toolbox.navigateTo(Home.this, Home_Reports.class));
-        myTestCardview.setOnClickListener(v -> Toolbox.navigateTo(Home.this, AddMilkToSell.class));
+        myTestCardview.setOnClickListener(v -> Toolbox.navigateTo(Home.this, Display_SalesProducts.class));
     }
 }

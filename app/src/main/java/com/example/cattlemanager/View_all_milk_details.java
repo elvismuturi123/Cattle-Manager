@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.example.cattlemanager.Adapters.MilkAdapter;
+import com.example.cattlemanager.Classses.Milk;
+import com.example.cattlemanager.Classses.Toolbox;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;

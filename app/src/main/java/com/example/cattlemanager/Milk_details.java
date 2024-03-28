@@ -20,6 +20,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cattlemanager.Classses.Cows;
+import com.example.cattlemanager.Classses.Milk;
+import com.example.cattlemanager.Classses.Toolbox;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;

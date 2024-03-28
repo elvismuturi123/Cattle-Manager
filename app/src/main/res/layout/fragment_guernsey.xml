@@ -98,7 +98,7 @@
                     android:id="@+id/dispBreedSales"
                     android:layout_marginStart="20dp"
                     android:background="@color/dblue"
-                    android:text="  "
+                    android:text=" "
                     android:textColor="@color/dwhite"
                     />
 
@@ -128,7 +128,7 @@
                     android:id="@+id/dispAvailableQuantity"
                     android:layout_marginStart="20dp"
                     android:background="@color/dblue"
-                    android:text="  "
+                    android:text=" "
                     android:textColor="@color/dwhite"
                     />
 
@@ -164,12 +164,22 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/dblue"
+                    android:text="KES"
+                    android:textColor="@color/dwhite"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/disp_pricePerLitre"
                     android:layout_marginStart="20dp"
                     android:background="@color/dblue"
-                    android:text="  "
+                    android:text=" "
                     android:textColor="@color/dwhite"
                     />
+
 
             </LinearLayout>
 

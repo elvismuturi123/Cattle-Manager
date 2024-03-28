@@ -1,4 +1,4 @@
-package com.example.cattlemanager;
+package com.example.cattlemanager.Classses;
 
 import android.os.Parcel;
 import android.os.Parcelable;

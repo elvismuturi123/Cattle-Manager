@@ -1,14 +1,16 @@
 package com.example.cattlemanager;
 
+import android.os.Bundle;
+import android.widget.ImageButton;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-import android.widget.ImageButton;
-import android.widget.Toast;
-
+import com.example.cattlemanager.Adapters.MilkAdapter;
+import com.example.cattlemanager.Classses.Milk;
+import com.example.cattlemanager.Classses.Toolbox;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,7 +42,7 @@ public class Display_milk extends AppCompatActivity {
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Milk_Details");
 
-databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference.addValueEventListener(new ValueEventListener() {
     @Override
     public void onDataChange(@NonNull DataSnapshot snapshot) {
         milkArrayList.clear();
