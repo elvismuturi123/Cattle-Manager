@@ -7,12 +7,24 @@
     android:padding="6dp"
     tools:context=".SalesPageActivity">
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnViewOrders"
+        android:text="View Orders"
+
+        android:layout_alignParentEnd="true"
+
+
+        />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:text="Milk Sales"
         android:background="@color/dblue"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="55dp"
         android:textAllCaps="true"
         android:textColor="@color/dwhite"
         android:gravity="center"
@@ -24,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/titleTextView"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@color/dwhite"
         android:id="@+id/salesMilkTabLayout" >
 

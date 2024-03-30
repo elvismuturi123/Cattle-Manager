@@ -1,10 +1,12 @@
 package com.example.cattlemanager;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.cattlemanager.Classses.Toolbox;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -14,7 +16,7 @@ public class SalesPageActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
 
-
+    Button btnViewOrders;
 
     DatabaseReference salesRef = FirebaseDatabase.getInstance().getReference("Sales");
 
@@ -22,6 +24,7 @@ public class SalesPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales_page);
+
 //
 //        // Get class data
 //         MilkProduct milkProduct = new MilkProduct(productID, cBreed, cDate, cTotal, cPrice, cNotes);
@@ -32,6 +35,13 @@ public class SalesPageActivity extends AppCompatActivity {
         viewPager2 = findViewById(R.id.viewPagerSales);
         viewPagerAdapter = new ViewPagerAdapter(this);
         viewPager2.setAdapter(viewPagerAdapter);
+
+        btnViewOrders = findViewById(R.id.btnViewOrders);
+
+        btnViewOrders.setOnClickListener(v -> {
+            Toolbox.navigateTo(getApplicationContext(), Vieworders.class);
+        });
+
 
        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
            @Override

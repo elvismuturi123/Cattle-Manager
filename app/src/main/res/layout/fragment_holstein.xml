@@ -162,12 +162,21 @@
                     />
 
                 <TextView
+                    android:id="@+id/disp_pricePerLitre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/disp_pricePerLitre"
                     android:layout_marginStart="20dp"
                     android:background="@color/dblue"
                     android:text="  "
+                    android:textColor="@color/dwhite" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="20dp"
+                    android:background="@color/dblue"
+                    android:text="Shillings"
                     android:textColor="@color/dwhite"
                     />
 
