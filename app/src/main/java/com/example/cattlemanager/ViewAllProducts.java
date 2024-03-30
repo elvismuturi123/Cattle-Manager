@@ -2,6 +2,7 @@ package com.example.cattlemanager;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,15 +20,41 @@ public class ViewAllProducts extends AppCompatActivity {
     TextView Date;
     TextView AvailableMilk;
     TextView PricePerLitre;
+
+    Button UpdateAvailableMilk;
+    String saleID, breed, date, available,price;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_all_products);
 
+        //ui declaration
         Breed = findViewById(R.id.disp_Breed1);
         Date = findViewById(R.id.disp_saleDate1);
         AvailableMilk = findViewById(R.id.disp_milkAvailable1);
         PricePerLitre = findViewById(R.id.disp_pricePerLter1);
+        UpdateAvailableMilk = findViewById(R.id.updateAvailableMilkBtn);
+
+
+
+        //get data from intent
+
+        saleID = getIntent().getStringExtra("saleId");
+        breed = getIntent().getStringExtra("breed");
+        date = getIntent().getStringExtra("date");
+        available = getIntent().getStringExtra("available");
+        price = getIntent().getStringExtra("price");
+
+
+        //set up the ui
+
+        Breed.setText(breed);
+        Date.setText(date);
+        AvailableMilk.setText(available);
+        PricePerLitre.setText(price);
+
+
+
 
         String SaleId = getIntent().getStringExtra("saleId");
         DatabaseReference docRef1 = FirebaseDatabase.getInstance().getReference("Sales").child("SaleId");

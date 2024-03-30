@@ -34,7 +34,6 @@ public class Login extends AppCompatActivity {
 //        });
         login.setOnClickListener(v -> {
 
-            Toolbox.navigateTo(getApplicationContext(), Home.class);
             String email, password;
 
             email = editTextEmailL.getText().toString().trim();

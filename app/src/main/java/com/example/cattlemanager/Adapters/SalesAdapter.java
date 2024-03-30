@@ -11,9 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.cattlemanager.R;
+import com.example.cattlemanager.AddMilkToSell;
 import com.example.cattlemanager.Classses.MilkProduct;
-import com.example.cattlemanager.ViewAllProducts;
+import com.example.cattlemanager.R;
 
 import java.util.ArrayList;
 
@@ -40,10 +40,21 @@ public class SalesAdapter extends RecyclerView.Adapter<SalesAdapter.MyViewHolder
         holder.PricePerLitre.setText(newMilkProductRecord.getcPrice());
         String sale_id = newMilkProductRecord.getProductID();
 
+        boolean isEditMode = true;
+
         holder.itemView.setOnClickListener(v -> {
 
-            Intent intent = new Intent(context, ViewAllProducts.class);
+            Intent intent = new Intent(context, AddMilkToSell.class);
             intent.putExtra("saleId", sale_id);
+            intent.putExtra("breed", newMilkProductRecord.getcBreed());
+            intent.putExtra("date", newMilkProductRecord.getcDate());
+            intent.putExtra("available", newMilkProductRecord.getcTotal());
+            intent.putExtra("notes", newMilkProductRecord.getcNotes());
+            intent.putExtra("price", newMilkProductRecord.getcPrice());
+            intent.putExtra("editMode", isEditMode);
+
+
+
             context.startActivity(intent);
         });
     }

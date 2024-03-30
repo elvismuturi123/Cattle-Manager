@@ -123,7 +123,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Shillings  :"
+                    android:text="Shillings"
                     android:layout_marginStart="10dp"
                     />
 
@@ -138,17 +138,6 @@
                     android:layout_height="wrap_content"
                     >
 
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/updateSaleBtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerInParent="true"
-                        android:background="@color/dblue"
-                        android:elevation="5dp"
-                        android:paddingHorizontal="10dp"
-                        android:text="buy milk"
-                        android:textColor="@color/dwhite" />
 
                 </RelativeLayout>
 
