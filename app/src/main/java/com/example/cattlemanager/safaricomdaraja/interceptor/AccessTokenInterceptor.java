@@ -5,7 +5,7 @@ import android.util.Base64;
 
 import androidx.annotation.NonNull;
 
-import com.example.coffee.safaricomdaraja.BuildConfig;
+import com.example.cattlemanager.safaricomdaraja.BuildConfig;
 
 import java.io.IOException;
 

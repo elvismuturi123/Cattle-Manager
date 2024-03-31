@@ -1,7 +1,7 @@
 package com.example.cattlemanager.safaricomdaraja.services;
 
-import com.example.coffee.safaricomdaraja.blueprint.AccessToken;
-import com.example.coffee.safaricomdaraja.blueprint.STKPush;
+import com.example.cattlemanager.safaricomdaraja.blueprint.AccessToken;
+import com.example.cattlemanager.safaricomdaraja.blueprint.STKPush;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

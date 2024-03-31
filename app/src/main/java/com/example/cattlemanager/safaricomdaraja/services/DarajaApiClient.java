@@ -1,13 +1,13 @@
 package com.example.cattlemanager.safaricomdaraja.services;
 
 
-import static com.example.coffee.safaricomdaraja.Constants.BASE_URL;
-import static com.example.coffee.safaricomdaraja.Constants.CONNECT_TIMEOUT;
-import static com.example.coffee.safaricomdaraja.Constants.READ_TIMEOUT;
-import static com.example.coffee.safaricomdaraja.Constants.WRITE_TIMEOUT;
+import static com.example.cattlemanager.safaricomdaraja.Constants.BASE_URL;
+import static com.example.cattlemanager.safaricomdaraja.Constants.CONNECT_TIMEOUT;
+import static com.example.cattlemanager.safaricomdaraja.Constants.READ_TIMEOUT;
+import static com.example.cattlemanager.safaricomdaraja.Constants.WRITE_TIMEOUT;
 
-import com.example.coffee.safaricomdaraja.interceptor.AccessTokenInterceptor;
-import com.example.coffee.safaricomdaraja.interceptor.AuthInterceptor;
+import com.example.cattlemanager.safaricomdaraja.interceptor.AccessTokenInterceptor;
+import com.example.cattlemanager.safaricomdaraja.interceptor.AuthInterceptor;
 
 import java.util.concurrent.TimeUnit;
 

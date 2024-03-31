@@ -55,20 +55,12 @@ public class Payorder extends AppCompatActivity {
         mApiClient = new DarajaApiClient();
         mApiClient.setIsDebug(true);
 
-
         btn_payOrder.setOnClickListener(v -> {
 
             String phoneNumber = Customerphone.getText().toString().trim();
 
             Toolbox.showToast(getApplicationContext(), phoneNumber + " " + totalCost);
 
-
         });
-
-
     }
-
-
-
-
 }

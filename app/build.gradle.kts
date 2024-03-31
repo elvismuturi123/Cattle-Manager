@@ -59,8 +59,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.viewpager2:viewpager2:1.0.0")
 
-    implementation("com.jakewharton.timber:timber:4.7.1")
 
+           // MPesa Implementations
+    implementation("com.jakewharton.timber:timber:4.7.1")
     implementation("com.squareup.okhttp3:logging-interceptor:3.12.0")
     implementation("com.squareup.retrofit2:retrofit:2.5.0")
     implementation("com.squareup.retrofit2:converter-gson:2.5.0")
