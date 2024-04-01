@@ -16,7 +16,7 @@ public class SalesPageActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     ViewPagerAdapter viewPagerAdapter;
 
-    Button btnViewOrders;
+    Button btnViewOrders, btnViewReports;
 
     DatabaseReference salesRef = FirebaseDatabase.getInstance().getReference("Sales");
 
@@ -37,9 +37,15 @@ public class SalesPageActivity extends AppCompatActivity {
         viewPager2.setAdapter(viewPagerAdapter);
 
         btnViewOrders = findViewById(R.id.btnViewOrders);
+        btnViewReports =findViewById(R.id.btnViewSalesReport);
+
 
         btnViewOrders.setOnClickListener(v -> {
             Toolbox.navigateTo(getApplicationContext(), Vieworders.class);
+        });
+
+        btnViewReports.setOnClickListener(v -> {
+            Toolbox.navigateTo(getApplicationContext(), Reports.class);
         });
 
 

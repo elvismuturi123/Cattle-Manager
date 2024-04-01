@@ -1,4 +1,5 @@
-package com.example.cattlemanager.safaricomdaraja.blueprint;// package com.alvin.smartloan.DarajaModels;
+package com.example.cattlemanager.safaricomdaraja.blueprint;
+
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

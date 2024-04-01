@@ -46,9 +46,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
 
             Order thisOrder = orderArrayList.get(position);
 
-            Order.PaymentData paymentData = thisOrder.getPaymentData();
-
-            double orderTotal = paymentData.getTotalAmount();
+           double orderTotal = thisOrder.getOrderTotal();
 
             Intent intent = new Intent(context, Payorder.class);
 
@@ -56,6 +54,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.MyViewHolder
             intent.putExtra("quantity", thisOrder.getMilkQuantity());
             intent.putExtra("totalCost", orderTotal);
             intent.putExtra("orderID", thisOrder.getOrderId());
+            intent.putExtra("productReference", thisOrder.getMilkProductReference());
+
             context.startActivity(intent);
         });
     }

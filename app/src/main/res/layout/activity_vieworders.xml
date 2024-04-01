@@ -13,16 +13,22 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Orders"
-        android:gravity="center"
+        android:background="@color/dblue"
+        android:textColor="@color/dwhite"
+        android:layout_gravity="center_horizontal"
+        android:text="Milk Orders"
+        android:textAllCaps="true"
+        android:gravity="center_horizontal"
         android:textSize="40sp"
         />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/Dorminant_1"
+        android:layout_marginBottom="20dp"
         android:id="@+id/showOrdersRecycler"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
 
         />
 

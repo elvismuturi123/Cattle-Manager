@@ -50,15 +50,11 @@ public class MilkAdapter extends RecyclerView.Adapter<MilkAdapter.MyViewHolder> 
             }
         });
 
-
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, View_all_milk_details.class);
             intent.putExtra("milkDay_ID", milkgDayId);
             context.startActivity(intent);
         });
-
-
-
     }
     @Override
     public int getItemCount() {

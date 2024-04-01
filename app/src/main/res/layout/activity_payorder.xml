@@ -9,9 +9,29 @@
     android:padding="10dp"
     >
 
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:text="CONFIRM PAYMENT"
+    android:layout_marginTop="50dp"
+    android:gravity="center"
+    android:textColor="@color/dwhite"
+    android:background="@color/dblue"
+    />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="50dp"
+
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
@@ -37,6 +57,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         android:layout_marginTop="10dp"
         >
@@ -74,6 +95,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center"
         android:layout_marginTop="10dp"
         >
 
@@ -123,4 +145,5 @@
         android:text="Pay Order"/>
 
 
+</LinearLayout>
 </LinearLayout>

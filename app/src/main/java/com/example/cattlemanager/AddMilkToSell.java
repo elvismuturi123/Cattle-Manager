@@ -33,9 +33,7 @@ import java.util.Map;
 public class AddMilkToSell extends AppCompatActivity {
 
     DatePickerDialog.OnDateSetListener listener;
-
     String productID = " ";
-
     private AppCompatButton saveSalesButton;
     String cow_Breed = " ";
     Spinner cowBreedCategorySpinner;
@@ -76,14 +74,13 @@ public class AddMilkToSell extends AppCompatActivity {
         String Breed2 = "Jersey";
         String Breed3 = "Guernsey";
         String Breed4 = "Holstein";
-        String Breed5 = "Friesian";
+        String Breed5 = "Fresian";
 
         cow_BreedCategories_array[0] = Breed1;
         cow_BreedCategories_array[1] = Breed2;
         cow_BreedCategories_array[2] = Breed3;
         cow_BreedCategories_array[3] = Breed4;
         cow_BreedCategories_array[4] = Breed5;
-
 
         // Initialize cowBreedCategorySpinner by finding it using findViewById
         cowBreedCategorySpinner = findViewById(R.id.cattleBreedSelectSpinner); // Replace 'your_spinner_id' with the actual ID of your spinner

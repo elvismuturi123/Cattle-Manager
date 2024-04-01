@@ -7,16 +7,24 @@
     android:padding="6dp"
     tools:context=".SalesPageActivity">
 
+
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnViewOrders"
         android:text="View Orders"
-
-        android:layout_alignParentEnd="true"
-
-
+        android:layout_alignParentStart="true"
         />
+
+<Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnViewSalesReport"
+        android:text="View Reports"
+        android:layout_alignParentEnd="true"
+        />
+
 
     <TextView
         android:layout_width="match_parent"

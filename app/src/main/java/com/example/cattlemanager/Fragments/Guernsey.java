@@ -49,8 +49,6 @@ public class Guernsey extends Fragment {
 
         ordersRef =  FirebaseDatabase.getInstance().getReference("Orders");
 
-
-
         // Get a reference to the database location
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Products");
 
@@ -67,31 +65,27 @@ public class Guernsey extends Fragment {
 
 
                     if (milkProducts!=null){
-                        
-                        
+
                         if(milkProducts.getcBreed().equals("Guernsey")){
-                            Toolbox.showToast(getActivity(),"match found");
+
+
+                            if (!isAdded()){
+
+                            }else {
+                                Toolbox.showToast(getActivity(),"match found");
+                            }
 
                             breed = milkProducts.getcBreed();
                             available =milkProducts.getcTotal();
                             price =milkProducts.getcPrice();
                             productID =milkProducts.getProductID();
-
-
                         } 
                     }
-                    
-
                     // Process the key and value as needed
                 }
-
-
-
                 dispBreedName.setText(breed);
                 dispAvailableQuantity.setText(available);
                 dispPricePerLitre.setText(price);
-
-
 
             }
 
@@ -151,11 +145,10 @@ public class Guernsey extends Fragment {
                     double totalOrderAmount = Double.valueOf(quantityEntered)*Double.valueOf(price);
 
 
-                    Order.PaymentData paymentData = new Order.PaymentData(totalOrderAmount," ","NOT PAID"," ");
 
 
                     //create a  new order
-                    Order new_order = new Order(orderID,order_date,quantityEntered," ",orderUniqueCode,"NOT PROCESSED",Toolbox.timestamp2_String(Timestamp.now()),paymentData);
+                    Order new_order = new Order(orderID,order_date,quantityEntered," ",orderUniqueCode,"NOT PROCESSED",Toolbox.timestamp2_String(Timestamp.now()),productID,totalOrderAmount);
 
                     newMilkOrderRecord.setValue(new_order, new DatabaseReference.CompletionListener() {
                         @Override
@@ -164,7 +157,7 @@ public class Guernsey extends Fragment {
                             if (error==null){
                                 //update succeeded
                                 Toolbox.showToast(getActivity(),"Order placed successfully");
-                                Toolbox.navigateTo(getActivity(), SalesPageActivity.class);
+                                Toolbox.navigateTo(getContext(), SalesPageActivity.class);
                             }else {
                                 //update failed
                                 Toolbox.showToast(getActivity(),error.toException().toString());
@@ -177,30 +170,13 @@ public class Guernsey extends Fragment {
                     buyMilkAlertDialog.dismiss();
                 });
 
-
                 // Create and show the dialog
                 buyMilkAlertDialog.show();
 
-
-
-
-
-
         });
-
-
-
 
         // Inflate the layout for this fragment
         return view;
     }
-    private void updateGuernseyData(MilkProduct milkProduct){
 
-        if (milkProduct.getcBreed().equals("Guernsey") ) {
-            dispBreedName.setText(milkProduct.getcBreed());
-            dispAvailableQuantity.setText("Guernsey"); // Assuming MilkProduct has a getcTotal() method
-            dispPricePerLitre.setText(String.valueOf(milkProduct.getcPrice())); // Assuming MilkProduct has a getPricePerLiter() method
-
-        }
-    }
 }

@@ -18,6 +18,9 @@
         android:theme="@style/Theme.CattleManager"
         tools:targetApi="31">
         <activity
+            android:name=".Reports"
+            android:exported="false" />
+        <activity
             android:name=".Payorder"
             android:exported="false" />
         <activity

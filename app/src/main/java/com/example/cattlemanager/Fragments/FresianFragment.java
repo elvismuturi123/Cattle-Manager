@@ -28,28 +28,32 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class HolsteinFragment extends Fragment {
+public class FresianFragment extends Fragment {
+
     DatabaseReference ProductGuernseyRef;
-    TextView dispBreedName3, dispAvailableQuantity3, dispPricePerLitre3;
+    TextView dispBreedName, dispAvailableQuantity, dispPricePerLitre;
+
     String productID, breed, date, available, note, price;
+
     DatabaseReference ordersRef;
-    Button btn_buyMilk3;
+    Button btn_buyMilk;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_holstein, container, false);
 
-        dispBreedName3 = view.findViewById(R.id.dispBreedSales);
-        dispAvailableQuantity3 = view.findViewById(R.id.dispAvailableQuantity);
-        dispPricePerLitre3 = view.findViewById(R.id.disp_pricePerLitre);
-        btn_buyMilk3 = view.findViewById(R.id.buyButton);
+        View view = inflater.inflate(R.layout.fragment_friesian, container, false);
+
+        dispBreedName = view.findViewById(R.id.dispBreedSales);
+        dispAvailableQuantity = view.findViewById(R.id.dispAvailableQuantity);
+        dispPricePerLitre = view.findViewById(R.id.disp_pricePerLitre);
+        btn_buyMilk = view.findViewById(R.id.buyButton);
 
         ordersRef =  FirebaseDatabase.getInstance().getReference("Orders");
 
         // Get a reference to the database location
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Products");
 
-        // Attach a listener to get all data under the node
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -63,7 +67,7 @@ public class HolsteinFragment extends Fragment {
 
                     if (milkProducts!=null){
 
-                        if(milkProducts.getcBreed().equals("Holstein")){
+                        if(milkProducts.getcBreed().equals("Fresian")){
 
                             if (!isAdded()){
 
@@ -79,18 +83,19 @@ public class HolsteinFragment extends Fragment {
                     }
                     // Process the key and value as needed
                 }
-                dispBreedName3.setText(breed);
-                dispAvailableQuantity3.setText(available);
-                dispPricePerLitre3.setText(price);
+                dispBreedName.setText(breed);
+                dispAvailableQuantity.setText(available);
+                dispPricePerLitre.setText(price);
 
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 // Handle errors
             }
         });
 
-        btn_buyMilk3.setOnClickListener(v -> {
+        btn_buyMilk.setOnClickListener(v -> {
             //show buy milk dialog
 
             LayoutInflater buyMilkInflater = LayoutInflater.from(getActivity());
@@ -110,7 +115,7 @@ public class HolsteinFragment extends Fragment {
             Button btn_cancel = customView.findViewById(R.id.btnCancel);
             Button btn_proceed = customView.findViewById(R.id.btnProceed);
             String title, message, warning;
-            title = "BUY MILK";
+            title = "Buy Milk";
 
             alertTitle.setText(title);
 
@@ -136,7 +141,6 @@ public class HolsteinFragment extends Fragment {
                 String order_date = dateFormat.format(currentDate);
 
                 double totalOrderAmount = Double.valueOf(quantityEntered)*Double.valueOf(price);
-
 
 
 
@@ -167,6 +171,7 @@ public class HolsteinFragment extends Fragment {
             buyMilkAlertDialog.show();
 
         });
+
         return view;
     }
 }

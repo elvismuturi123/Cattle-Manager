@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dblack"
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:background="@color/Dorminant_1"
+        android:background="@color/dblue"
         android:id="@+id/page_title2"
         android:textSize="32sp"
         android:layout_marginTop="30dp"
@@ -39,23 +40,8 @@
             android:layout_height="579dp"
             android:layout_margin="20dp"
             android:orientation="vertical"
-            android:background="@color/dblue"
+            android:background="@color/white"
             android:padding="20dp">
-
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="25dp"-->
-<!--                android:gravity="center_horizontal"-->
-<!--                android:background="@color/dwhite"-->
-<!--                android:text="Elegance success"-->
-<!--                android:textAllCaps="true"-->
-<!--                android:textStyle="bold"-->
-<!--                android:textSize="22dp"-->
-<!--                android:textColor="@color/Dorminant_1"-->
-<!--                android:layout_marginBottom="20dp"-->
-<!--                />-->
-
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -91,14 +77,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="Date  :" />
 
                 <TextView
                     android:id="@+id/disp_milkingDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:layout_marginStart="10dp"
                     android:text="  " />
 
@@ -114,7 +100,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="Morning Total  :" />
 
                 <TextView
@@ -122,14 +108,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="  " />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="Liters" />
             </LinearLayout>
 
@@ -143,7 +129,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Afternoon Total  :"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
 
                     />
 
@@ -152,14 +138,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="  " />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="Liters" />
 
             </LinearLayout>
@@ -173,7 +159,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="Evening Total  :" />
 
                 <TextView
@@ -181,14 +167,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="  " />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="Liters" />
             </LinearLayout>
 
@@ -201,7 +187,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="Total Milk  :" />
 
                 <TextView
@@ -209,14 +195,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="  " />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:textColor="@color/dwhite"
+                    android:textColor="@color/dblack"
                     android:text="Liters" />
 
             </LinearLayout>
@@ -233,7 +219,7 @@
                     android:background="@color/Dorminant_1"
                     android:layout_marginTop="15dp"
                     android:gravity="center_horizontal"
-                    android:text="Notes"
+                    android:text="Additional"
                     android:textAllCaps="true"
                     android:textColor="@color/dwhite" />
 
@@ -255,13 +241,13 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/Dorminant_1"
-                android:backgroundTint="@color/Dorminant_1"
+                android:background="@color/dblue"
+                android:backgroundTint="@color/dblue"
                 android:layout_gravity="end"
                 android:textColor="@color/dwhite"
                 android:layout_marginTop="10dp"
                 android:id="@+id/navigateToCare"
-                android:text="Update"
+                android:text="health record"
                 />
 
         </LinearLayout>

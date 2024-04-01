@@ -3,17 +3,15 @@ package com.example.cattlemanager.Classses;
 
 public class Order {
 
-    String orderId, orderDate, milkQuantity,orderNo,orderUniqueCode,orderStatus,orderTimestamp;
+    String orderId, orderDate, milkQuantity,orderNo,orderUniqueCode,orderStatus,orderTimestamp,milkProductReference;
 
-
-
-    private  PaymentData paymentData;
+    double orderTotal;
 
 
     public Order() {
     }
 
-    public Order(String orderId, String orderDate, String milkQuantity, String orderNo, String orderUniqueCode, String orderStatus, String orderTimestamp, PaymentData paymentData) {
+    public Order(String orderId, String orderDate, String milkQuantity, String orderNo, String orderUniqueCode, String orderStatus, String orderTimestamp, String milkProductReference, double orderTotal) {
         this.orderId = orderId;
         this.orderDate = orderDate;
         this.milkQuantity = milkQuantity;
@@ -21,11 +19,11 @@ public class Order {
         this.orderUniqueCode = orderUniqueCode;
         this.orderStatus = orderStatus;
         this.orderTimestamp = orderTimestamp;
-        this.paymentData = paymentData;
+        this.milkProductReference = milkProductReference;
+        this.orderTotal = orderTotal;
     }
 
     public String getOrderId() {
-
         return orderId;
     }
 
@@ -49,48 +47,15 @@ public class Order {
         return orderStatus;
     }
 
-
-    public PaymentData getPaymentData() {
-        return paymentData;
-    }
-
     public String getOrderTimestamp() {
         return orderTimestamp;
     }
 
-    public  static  class  PaymentData{
-
-        private  double totalAmount;
-        private  String paymentTime;
-        private  String paymentStatus;
-        private  String transactionID;
-
-        public PaymentData() {
-
-        }
-
-        public PaymentData(double totalAmount, String paymentTime, String paymentStatus, String transactionID) {
-            this.totalAmount = totalAmount;
-            this.paymentTime = paymentTime;
-            this.paymentStatus = paymentStatus;
-            this.transactionID = transactionID;
-        }
-
-        public double getTotalAmount() {
-            return totalAmount;
-        }
-
-        public String getPaymentTime() {
-            return paymentTime;
-        }
-
-        public String getPaymentStatus() {
-            return paymentStatus;
-        }
-
-        public String getTransactionID() {
-            return transactionID;
-        }
+    public String getMilkProductReference() {
+        return milkProductReference;
     }
 
+    public double getOrderTotal() {
+        return orderTotal;
+    }
 }

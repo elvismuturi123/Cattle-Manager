@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.cattlemanager.Fragments.AyrshireFragment;
-import com.example.cattlemanager.Fragments.FriesianFragment;
+import com.example.cattlemanager.Fragments.FresianFragment;
 import com.example.cattlemanager.Fragments.Guernsey;
 import com.example.cattlemanager.Fragments.HolsteinFragment;
 import com.example.cattlemanager.Fragments.JerseyFragment;
@@ -30,7 +30,7 @@ public class ViewPagerAdapter extends FragmentStateAdapter {
             case 3:
                 return new HolsteinFragment();
             case 4:
-                return new FriesianFragment();
+                return new FresianFragment();
             default:
                 return new JerseyFragment();
         }
