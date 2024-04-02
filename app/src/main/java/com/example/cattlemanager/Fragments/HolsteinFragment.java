@@ -68,7 +68,6 @@ public class HolsteinFragment extends Fragment {
                             if (!isAdded()){
 
                             }else {
-                                Toolbox.showToast(getActivity(),"match found");
                             }
 
                             breed = milkProducts.getcBreed();

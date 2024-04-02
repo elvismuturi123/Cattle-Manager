@@ -10,7 +10,9 @@
       <ImageView
           android:layout_width="60dp"
           android:layout_height="90dp"
-          android:background="@color/Dorminant_1"
+          android:background="@color/dwhite"
+          android:layout_centerVertical="true"
+          android:src="@drawable/feeds"
           />
 
     <androidx.cardview.widget.CardView

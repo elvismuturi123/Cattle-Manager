@@ -69,7 +69,6 @@ public class AyrshireFragment extends Fragment {
                             if (!isAdded()){
 
                             }else {
-                                Toolbox.showToast(getActivity(),"match found");
                             }
 
                             breed2 = milkProducts.getcBreed();
@@ -164,8 +163,6 @@ public class AyrshireFragment extends Fragment {
             buyMilkAlertDialog.show();
 
         });
-
-
 
         // Inflate the layout for this fragment
         return view;

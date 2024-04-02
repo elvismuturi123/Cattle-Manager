@@ -13,10 +13,9 @@
         android:layout_height="45dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:background="@color/dwhite"
         android:layout_centerHorizontal="true"
         android:text="CATTLE MANAGER"
-        android:textColor="@color/dblue"
+        android:textColor="@color/dwhite"
         android:textStyle="bold"
         android:textSize="28sp"
         />
@@ -25,7 +24,6 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/title_view"
         android:layout_margin="3dp"
-        android:background="@color/dblue"
         android:columnCount="2"
         android:padding="16dp"
         android:rowCount="3">

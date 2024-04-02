@@ -26,7 +26,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
 public class Production_Reports extends AppCompatActivity {
     PieChart milkPiechart;
 
@@ -119,7 +118,6 @@ public class Production_Reports extends AppCompatActivity {
                 }
                 computeTotals(morningProductionList,afternoonProductionList,eveningProductionList);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 Log.d("Database Error",error.getMessage());

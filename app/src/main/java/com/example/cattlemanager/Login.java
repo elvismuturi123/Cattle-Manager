@@ -26,13 +26,9 @@ public class Login extends AppCompatActivity {
         editTextPasswordL = findViewById(R.id.passwordLL);
 
         Button login = findViewById(R.id.btn_Login);
-//        login.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toolbox.navigateTo(Login.this,Home.class);
-//            }
-//        });
+
         login.setOnClickListener(v -> {
+            Toolbox.navigateTo(getApplicationContext(), Home.class);
 
             String email, password;
 
@@ -41,7 +37,6 @@ public class Login extends AppCompatActivity {
 
             User_EMAIL= email;
             User_PASSWORD =password;
-
 
             if(!email.isEmpty() && !password.isEmpty()){
                 validator();
@@ -54,8 +49,9 @@ public class Login extends AppCompatActivity {
 
         if(Patterns.EMAIL_ADDRESS.matcher(User_EMAIL).matches()){
             if(User_PASSWORD.length()<6){
-                Toolbox.showToast(Login.this, "The password is too short.");
+                Toolbox.showToast(Login.this, "Invalid Password!!");
             }else {
+                Toolbox.showToast(getApplicationContext(), "Login Successful !!");
                loginUser();
             }
         }else {

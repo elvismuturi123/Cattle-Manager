@@ -11,9 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Splash extends AppCompatActivity {
-
     FirebaseAuth firebaseAuth =FirebaseAuth.getInstance();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +26,11 @@ public class Splash extends AppCompatActivity {
                 finish();
             }else{
                 //there is a user signed in go to home screen
-                Toolbox.navigateTo(getApplicationContext(), Home.class);
+                Toolbox.navigateTo(getApplicationContext(), Login.class);
                 finish();
             }
         },1000);
-
-
     }
-
     private void navigateToWelcome() {
         Intent intent = new Intent(Splash.this, Welcome.class);
         startActivity(intent);

@@ -38,33 +38,23 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import timber.log.Timber;
 
-
 public class Payorder extends AppCompatActivity {
-
     TextView Uniquecode, Quantity, Totalcost;
-
     EditText Customerphone;
     Button btn_payOrder;
-
     String uniqueCode, quantity, orderID, phoneNumber, productReference ,amount;
     double totalCost;
-
-
     private DarajaApiClient mApiClient;
-
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     DatabaseReference salesRef = firebaseDatabase.getReference("Sales");
 
     DatabaseReference milkProductRef = firebaseDatabase.getReference("Products");
 
     DatabaseReference ordersRef = firebaseDatabase.getReference("Orders");
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payorder);
-
 
         //ui declaration
         Uniquecode = findViewById(R.id.dispUniqueCode);
@@ -83,13 +73,11 @@ public class Payorder extends AppCompatActivity {
 
         Toolbox.showToast(getApplicationContext(), productReference);
 
-
         //set up the ui
 
         Uniquecode.setText(uniqueCode);
         Quantity.setText(quantity);
         Totalcost.setText(String.valueOf(totalCost));
-
 
         //initalize daraja
         mApiClient = new DarajaApiClient();
@@ -105,12 +93,8 @@ public class Payorder extends AppCompatActivity {
             getAccessToken();
             Toolbox.showToast(getApplicationContext(), phoneNumber + " " + totalCost);
 
-
-
-
         });
     }
-
     private void getAccessToken() {
         mApiClient.setGetAccessToken(true);
         mApiClient.mpesaService().getAccessToken().enqueue(new Callback<AccessToken>() {
@@ -196,7 +180,7 @@ public class Payorder extends AppCompatActivity {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String today_date = dateFormat.format(today);
 
-        String transactionID = Toolbox.generateRandomString(5).toUpperCase();
+        String transactionID = Toolbox.generateRandomString(10).toUpperCase();
 
         Sales new_sale_record = new Sales(saleID, orderID, transactionID,
                 Toolbox.timestamp2_String(Timestamp.now()), phoneNumber, today_date, "PAID", Double.valueOf(amount));
@@ -245,8 +229,6 @@ public class Payorder extends AppCompatActivity {
 
                                         }
                                     });
-
-
                         }
                     });
 

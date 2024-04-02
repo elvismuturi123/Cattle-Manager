@@ -68,7 +68,6 @@ public class JerseyFragment extends Fragment {
                             if (!isAdded()) {
 
                             } else {
-                                Toolbox.showToast(getActivity(), "match found");
                             }
 
 
@@ -139,7 +138,6 @@ public class JerseyFragment extends Fragment {
                     //the available quantity is less than quantitu entered
                     Toolbox.showToast(getActivity(), "Insufficient quantities.Try Again.");
 
-
                 } else {
 
                     String orderUniqueCode = "DKF" + Toolbox.generateRandomNumber(4);
@@ -167,15 +165,11 @@ public class JerseyFragment extends Fragment {
                         }
                     });
                     buyMilkAlertDialog.dismiss();
-
                 }
-
-
             });
 
             // Create and show the dialog
             buyMilkAlertDialog.show();
-
         });
         return view;
     }

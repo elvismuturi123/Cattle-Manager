@@ -37,6 +37,7 @@
         android:layout_height="match_parent"
         android:background="@color/Dorminant_1"
         android:layout_below="@+id/simpleTabLayout"
+        android:layout_margin="10dp"
         android:id="@+id/viewPager"/>
 
 </RelativeLayout>

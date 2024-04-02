@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".MilkingTimeReport">
 
-
     <com.github.mikephil.charting.charts.PieChart
         android:layout_width="match_parent"
         android:layout_height="match_parent"

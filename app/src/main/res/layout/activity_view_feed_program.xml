@@ -33,7 +33,7 @@
         android:textSize="32sp"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
-        android:text="Events Display"
+        android:text="Display feeds"
         android:textAllCaps="true"
         android:textColor="@color/dwhite"
         android:textStyle="bold"/>
