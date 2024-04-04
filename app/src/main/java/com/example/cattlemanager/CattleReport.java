@@ -39,6 +39,8 @@ public class CattleReport extends AppCompatActivity {
     String[] cattleCategories;
     int bullCount,cowsCount,heiferCount,weanersCount,calvesCount,steersCount;
     private TableLayout tableLayout;
+   // private BarChart educationBarChart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,19 +49,16 @@ public class CattleReport extends AppCompatActivity {
         materialToolbar=findViewById(R.id.toolBar);
         tableLayout=findViewById(R.id.cattleTable);
 
-
-
         cattleBarChart = findViewById(R.id.cattleBarChart);
 
-
-
-
         // cattleChart=findViewById(R.id.analysisContainer);
-       // cattleReport=findViewById(R.id.cattleCategory);
+        // cattleReport=findViewById(R.id.cattleCategory);
 
         cattleBarChart=findViewById(R.id.cattleBarChart);
         cattleBarEntry=new ArrayList<>();
-       // cattleCategories=getApplicationContext().getResources().getStringArray(R.array.cattleCategories);
+        cattleCategories = new String [] {"Bulls", "Calves", "Heifers", "Cows", "Steers", "Weaners"};
+
+        // cattleCategories=getApplicationContext().getResources().getStringArray(R.array.cattleCategories);
         fetchData();
 
         materialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -74,12 +73,10 @@ public class CattleReport extends AppCompatActivity {
             TableRow row = new TableRow(this);
             String category = entry.getKey();
             int count = entry.getValue();
-
             TextView textViewCategory = new TextView(this);
             textViewCategory.setText(category);
             textViewCategory.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f));
             row.addView(textViewCategory);
-
             TextView textViewCount = new TextView(this);
             textViewCount.setText(String.valueOf(count));
             textViewCount.setLayoutParams(new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1f));
@@ -138,7 +135,7 @@ public class CattleReport extends AppCompatActivity {
 
     private void drawChart(ArrayList<BarEntry> cattleBarEntry) {
 
-        barDataSet=new BarDataSet(cattleBarEntry,"Cattle Category");
+        barDataSet=new BarDataSet(cattleBarEntry,"Category");
         barData=new BarData(barDataSet);
         cattleBarChart.setData(barData);
 
@@ -148,12 +145,15 @@ public class CattleReport extends AppCompatActivity {
         cattleBarChart.getDescription().setEnabled(false);
         XAxis xAxis=cattleBarChart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(cattleCategories));
+        xAxis.setLabelCount(cattleCategories.length); // Set label count to the number of categories
+        xAxis.setLabelRotationAngle(90f); // Rotate labels if needed
+        xAxis.setCenterAxisLabels(false); // Disable centering
+        xAxis.setAxisMaximum(6f);
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM_INSIDE);
         xAxis.setCenterAxisLabels(true);
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setGranularity(1);
         xAxis.setDrawAxisLine(true);
         xAxis.setGranularityEnabled(true);
-
 
         cattleBarChart.setDragEnabled(true);
         cattleBarChart.setVisibleXRangeMaximum(3);
@@ -184,7 +184,6 @@ public class CattleReport extends AppCompatActivity {
     }
 
     public static class Cattle {
-
 
         String ctlName;
         String ctlTag;

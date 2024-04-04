@@ -92,7 +92,6 @@ public class CRecords extends AppCompatActivity {
         cowCategorySpinner = findViewById(R.id.cowCategorySpinner);
         cowBreedCategorySpinner = findViewById(R.id.cattleBreedSelectSpinner);
 
-
         mStorageRef = FirebaseStorage.getInstance().getReference().child("Cattle_Images");
         mDatabaseRef2 = FirebaseDatabase.getInstance().getReference("cattle_details");
 
@@ -105,7 +104,6 @@ public class CRecords extends AppCompatActivity {
                 openFileChooser();
             }
         });
-
 
         cattleDbRef = FirebaseDatabase.getInstance().getReference("cattle_details");
 
@@ -144,7 +142,6 @@ public class CRecords extends AppCompatActivity {
         });
         tagNumber.setInputType(InputType.TYPE_CLASS_NUMBER);
         Weight.setInputType(InputType.TYPE_CLASS_NUMBER);
-
 
 //------------------Date Picker----------------------
 
@@ -296,7 +293,6 @@ public class CRecords extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Toolbox.showToast(CRecords.this, e.getMessage());
-
                         }
                     });
     }
@@ -327,7 +323,6 @@ public class CRecords extends AppCompatActivity {
                     }
                 });
     }
-
 
     // IMAGE SELECTION CONTINUATION
     private void openFileChooser() {

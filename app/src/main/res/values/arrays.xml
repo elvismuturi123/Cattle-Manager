@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="font_sizes">12sp</string-array>
+    <string-array name="cattleCategories">cattleCategories</string-array>
 </resources>
